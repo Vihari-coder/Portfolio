@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vihari Reddy Aleti — Backend &amp; AI Systems Engineer</title>
+  <meta name="description" content="Portfolio of Vihari Reddy Aleti — backend engineer specializing in Python, RESTful APIs, microservices and Generative AI / RAG systems." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Vihari Reddy Aleti — Backend & AI Systems Engineer" />
+  <meta property="og:description" content="Scalable APIs, microservices and RAG-powered AI systems." />
+  <meta property="og:type" content="website" />
+
+  <!-- Fonts: JetBrains Mono carries the "console / API" identity for display type & labels,
+       Inter is the calm, highly-legible workhorse for body copy. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⌘</text></svg>" />
+</head>
+<body>
+
+  <!-- Decorative animated node graph rendered behind everything on <canvas>.
+       Purely ambient — aria-hidden and paused automatically for reduced-motion users. -->
+  <canvas id="node-graph" aria-hidden="true"></canvas>
+
+  <!-- Skip link for keyboard / screen-reader users -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============================= HEADER / NAV ============================= -->
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <a href="#top" class="logo" aria-label="Vihari Reddy Aleti — home">
+        <span class="logo-bracket">&lt;</span>Python Developer<span class="logo-bracket">/&gt;</span>
+      </a>
+
+      <nav class="main-nav" id="main-nav" aria-label="Primary">
+        <ul>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#timeline" class="nav-link">Timeline</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <a href="#contact" class="btn btn-ghost header-cta">get in touch</a>
+
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============================= HERO ============================= -->
+    <section class="hero" id="top">
+      <div class="hero-inner">
+
+        <div class="hero-copy">
+          <h1 class="hero-title">
+            I build backend systems<br />
+            that <span class="accent-text">think, scale</span><br />
+            and stay online.
+          </h1>
+
+          <p class="hero-subtitle">
+            Vihari Reddy Aleti — a backend engineer who designs RESTful APIs, microservice
+            architectures and Retrieval-Augmented Generation pipelines that hold up in production,
+            not just in a notebook.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">View projects</a>
+            <a href="#contact" class="btn btn-outline">Contact me</a>
+          </div>
+
+          <dl class="hero-stats" aria-label="Key metrics">
+            <div class="stat">
+              <dt>25+</dt>
+              <dd>async REST APIs shipped</dd>
+            </div>
+            <div class="stat">
+              <dt>70%</dt>
+              <dd>manual test effort reduced</dd>
+            </div>
+            <div class="stat">
+              <dt>2</dt>
+              <dd>end-to-end production systems</dd>
+            </div>
+          </dl>
+        </div>
+
+        <!-- Signature element: a "live" terminal that requests his own profile,
+             mirroring his real REST API / curl workflow. Typed via JS, respects
+             prefers-reduced-motion (renders instantly, no animation). -->
+        <div class="hero-visual" aria-hidden="true">
+          <div class="terminal">
+            <div class="terminal-bar">
+              <span class="dot dot-red"></span>
+              <span class="dot dot-yellow"></span>
+              <span class="dot dot-green"></span>
+              <span class="terminal-title">zsh — profile.sh</span>
+            </div>
+            <pre class="terminal-body"><code id="terminal-output"></code><span class="cursor" id="terminal-cursor"></span></pre>
+          </div>
+        </div>
+
+      </div>
+
+      <a href="#about" class="scroll-cue" aria-label="Scroll to about section">
+        <span>scroll</span>
+        <svg width="14" height="20" viewBox="0 0 14 20" fill="none"><path d="M7 1v18M1 13l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </section>
+
+    <!-- ============================= ABOUT ============================= -->
+    <section class="section" id="About">
+      <div class="section-inner">
+        <p class="section-label">About</p>
+        <h2 class="section-title">Objective</h2>
+
+        <div class="about-grid">
+          <p class="about-text">
+            I'm a Master's graduate in Information Technology with a hands-on foundation in
+            Python and SQL, focused on building scalable applications, designing RESTful APIs
+            and developing modular backend services. I care about the parts of software
+            engineering that are easy to skip under deadline pressure &mdash; system design,
+            code maintainability and the difference between something that <em>runs</em> and
+            something that's <em>production ready</em>.
+          </p>
+
+          <ul class="about-meta">
+            <li>
+              <span class="meta-label">Based on</span>
+              <span class="meta-value">Python · SQL · JavaScript</span>
+            </li>
+            <li>
+              <span class="meta-label">Currently exploring</span>
+              <span class="meta-value">LLM orchestration &amp; RAG systems</span>
+            </li>
+            <li>
+              <span class="meta-label">Education</span>
+              <span class="meta-value">M.S. Information Technology</span>
+            </li>
+            <li>
+              <span class="meta-label">Response time</span>
+              <span class="meta-value">&lt; 24h</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================= SKILLS ============================= -->
+    <section class="section section-alt" id="skills">
+      <div class="section-inner">
+        <p class="section-label">Skills</p>
+        <h2 class="section-title">Service registry</h2>
+        <p class="section-intro">Every engineer maintains a stack. Here's the one running mine &mdash; grouped the way I'd group services in a system diagram.</p>
+
+        <div class="registry" id="registry">
+          <!-- Cards are generated from data in script.js to keep content and markup in sync -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================= PROJECTS ============================= -->
+    <section class="section" id="Projects">
+      <div class="section-inner">
+        <p class="section-label">Projects</p>
+        <h2 class="section-title">Selected work</h2>
+        <p class="section-intro">Two systems I designed end to end &mdash; from data ingestion and architecture down to deployment.</p>
+
+        <div class="projects-list" id="projects-list">
+          <!-- Populated by script.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================= TIMELINE ============================= -->
+    <section class="section section-alt" id="Timeline">
+      <div class="section-inner">
+        <p class="section-label">Timeline</p>
+        <h2 class="section-title">Education &amp; certifications</h2>
+
+        <ol class="timeline" id="timeline-list">
+          <!-- Populated by script.js -->
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============================= CONTACT ============================= -->
+    <section class="section contact-section" id="Contact">
+      <div class="section-inner">
+        <p class="section-label">Contact</p>
+        <h2 class="section-title">Let's build something reliable.</h2>
+        <p class="section-intro">
+          Open to backend, platform and applied-AI roles. The fastest way to reach me is email &mdash;
+          I typically respond within a day.
+        </p>
+
+        <div class="contact-grid">
+          <a class="contact-card" href="mailto:viharireddy2@gmail.com">
+            <span class="contact-label">Email</span>
+            <span class="contact-value">viharireddy2@gmail.com</span>
+          </a>
+          <a class="contact-card" href="tel:+19402903394">
+            <span class="contact-label">Phone</span>
+            <span class="contact-value">(940) 290-3394</span>
+          </a>
+          <a class="contact-card" href="https://www.linkedin.com/in/viharireddy2/" target="_blank" rel="noopener noreferrer">
+            <span class="contact-label">LinkedIn</span>
+            <span class="contact-value">/in/viharireddy2</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================= FOOTER ============================= -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="footer-status">
+        <span class="status-dot" aria-hidden="true"></span>
+        all systems operational
+      </p>
+      <p class="footer-copy">&copy; <span id="year"></span> Vihari Reddy Aleti. Built with HTML, CSS &amp; JavaScript.</p>
+      <button class="back-to-top" id="back-to-top" aria-label="Back to top">↑</button>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
